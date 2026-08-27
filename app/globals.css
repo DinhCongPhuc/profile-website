@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #EEF1F5;
+  color: #1C2333;
+}
+
+/* Hairline dividers used between sections */
+.hr-line {
+  border-top: 1px solid #D7DCE3;
+}
+
+/* Perforated / stamped card edge for the hero "ID card" */
+.card-edge {
+  position: relative;
+}
+.card-edge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  border: 1px solid #D7DCE3;
+  pointer-events: none;
+}
+
+/* Rotated stamp badge */
+.stamp {
+  transform: rotate(-6deg);
+}
+
+/* Reveal-on-scroll base state; toggled via .is-visible from RevealSection */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #2F5DE3;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
