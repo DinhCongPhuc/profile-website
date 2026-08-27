@@ -64,7 +64,7 @@ export default function Home() {
             </p>
 
             <h1 className="mt-4 font-display text-4xl leading-tight text-ink md:text-6xl">
-              Nguyễn Văn A
+              Đinh Công Phúc
             </h1>
 
             <p className="mt-3 font-display text-xl italic text-inksoft md:text-2xl">
@@ -252,7 +252,7 @@ export default function Home() {
         </RevealSection>
 
         <footer className="py-10 text-center font-mono text-xs text-inksoft">
-          © {new Date().getFullYear()} Nguyễn Văn A. Xây dựng bằng Next.js.
+          © {new Date().getFullYear()} Đinh Công Phúc. Xây dựng bằng Next.js.
         </footer>
       </main>
     </>
